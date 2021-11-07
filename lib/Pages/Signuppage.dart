@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../deviceSizeConfig.dart';
 
-class Loginpage extends StatelessWidget {
+class Signuppage extends StatelessWidget {
   
 
   @override
@@ -32,9 +32,9 @@ class Loginpage extends StatelessWidget {
                 ),
                 
                 SizedBox(height: 50,),
-                EditFieldWidget(text1:'Username or Email',text2: 'Password',),
                 
-                ButtonArea(buttontext: 'Login',lbuttontext: 'Continue with google',ttext: 'Create New Account',),
+                
+                
                 
               ],
             ),

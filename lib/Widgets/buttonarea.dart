@@ -20,10 +20,10 @@ class ButtonArea extends StatelessWidget {
           ),
           Mybutton(text: 'Continue in with google', c: Colors.grey.shade600, c1: Colors.white,borderSide: BorderSide(color: Colors.grey),),
           SizedBox(
-            height: DeviceSizeConfig.screenHeight!*0.01,
+            height: DeviceSizeConfig.screenHeight!*0.022,
           ),
-          Mybutton(text: 'Create a bubble account', c: Colors.white, c1: Colors.black87, borderSide: BorderSide()) 
-               
+          
+               InkWell(child: Text('Create New Account',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: Colors.blueAccent),))
         ],
       ),
     );

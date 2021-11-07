@@ -5,7 +5,9 @@ import '../deviceSizeConfig.dart';
 
 
 class EditFieldWidget extends StatelessWidget {
-  
+  final String? text1;
+  final String? text2;
+   EditFieldWidget({@required this.text1,@required this.text2});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,7 +19,7 @@ class EditFieldWidget extends StatelessWidget {
           TextField(
                  decoration: InputDecoration(
                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20),borderSide: BorderSide(color: Colors.blue)),
-                   labelText: 'Username or Email',
+                   labelText: text1,
                    labelStyle: TextStyle(color: Colors.grey.shade600),
                    prefixIcon: Icon(Icons.person,color: Colors.grey.shade600,)
                  ),
@@ -28,7 +30,7 @@ class EditFieldWidget extends StatelessWidget {
               TextField(
                  decoration: InputDecoration(
                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(20),borderSide: BorderSide(color: Colors.blue)),
-                   labelText: 'Password',
+                   labelText: text2,
                    labelStyle: TextStyle(color: Colors.grey.shade600),
                    prefixIcon: Icon(Icons.lock,color: Colors.grey.shade600,),
                    
