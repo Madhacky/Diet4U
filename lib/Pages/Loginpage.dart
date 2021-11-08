@@ -1,3 +1,4 @@
+import 'package:diet4u/Pages/signuppage.dart';
 import 'package:diet4u/Widgets/buttonarea.dart';
 import 'package:diet4u/Widgets/editfields.dart';
 import 'package:diet4u/Widgets/title.dart';
@@ -34,7 +35,8 @@ class Loginpage extends StatelessWidget {
                 SizedBox(height: 50,),
                 EditFieldWidget(text1:'Username or Email',text2: 'Password',),
                 
-                ButtonArea(buttontext: 'Login',lbuttontext: 'Continue with google',ttext: 'Create New Account',),
+                ButtonArea(ontap: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) => Signuppage()));}
+                ,buttontext: 'Login',lbuttontext: 'Continue with google',ttext: 'Create New Account',),
                 
               ],
             ),
