@@ -7,20 +7,22 @@ class Mybutton extends StatelessWidget {
   final Color? c;
   final Color? c1;
   final BorderSide? borderSide;
-  final Icon? i;
   
+  
+  final VoidCallback? ontap;
 
-Mybutton({@required this.text,@required this.c,@required this.c1,@required this.borderSide, this.i});
+const Mybutton({@required this.text,@required this.c,@required this.c1,@required this.borderSide,@required this.ontap});
   @override
   Widget build(BuildContext context) {
     return 
       
        InkWell(
+         onTap: ontap,
         child: Container(
           height: DeviceSizeConfig.screenHeight!*0.06,
           width: DeviceSizeConfig.screenWidth,
           decoration: BoxDecoration(
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Colors.grey,
                 blurRadius: 2.5
@@ -31,7 +33,13 @@ Mybutton({@required this.text,@required this.c,@required this.c1,@required this.
           mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               
-              Text(text!,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: c)),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  
+                  Text(text!,style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,color: c)),
+                ],
+              ),
             ],
           ),
         ),

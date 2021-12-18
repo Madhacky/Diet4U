@@ -1,4 +1,6 @@
 import 'package:diet4u/Pages/Loginpage.dart';
+import 'package:diet4u/Pages/Signuppage.dart';
+import 'package:diet4u/Pages/Splashscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home:  Loginpage(),
+      home: Splashscreen(),
     );
   }
 }
